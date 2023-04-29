@@ -27,7 +27,7 @@ class RouteOneScreen extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.of(context).pop(456);
+            Navigator.of(context).pop(456);  // pop() 안에 데이터를 넣으면 앞 페이지로 데이터 간다.(앞 페이지에서는 async 사용해야함)
           },
           child: Text('Pop'),
         ),

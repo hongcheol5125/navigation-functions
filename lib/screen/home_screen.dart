@@ -23,19 +23,19 @@ class HomeScreen extends StatelessWidget {
           // maybePop은 canPop의 값이 true일 때에만 뒤로 갈 수 있다!
           ElevatedButton(
             onPressed: () {
-              print(Navigator.of(context).canPop());
+              print(Navigator.of(context).canPop());  //canPop은 앞에 페이지가 있을 땐 true를 print한다.
             },
             child: Text('CanPop'),
           ),
           ElevatedButton(
             onPressed: () {
-              Navigator.of(context).pop();
+              Navigator.of(context).pop();  // 앞에 페이지 없으면 "까만화면" 나옴
             },
             child: Text('Pop'),
           ),
           ElevatedButton(
             onPressed: () {
-              Navigator.of(context).maybePop();
+              Navigator.of(context).maybePop();  // maybePop은 canPop의 값이 true일 때에만 뒤로 갈 수 있다!
             },
             child: Text('MaybePop'),
           ),

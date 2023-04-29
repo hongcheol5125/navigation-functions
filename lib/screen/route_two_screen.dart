@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigation/layout/main_layout.dart';
+import 'package:navigation/screen/home_screen.dart';
 import 'package:navigation/screen/route_three_screen.dart';
 
 class RouteTwoScreen extends StatelessWidget {
@@ -46,9 +47,9 @@ class RouteTwoScreen extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).pushAndRemoveUntil(  // pushNamedAndRemoveUntil도 존재!
               MaterialPageRoute(
-                builder: (_) => RouteThreeScreen(),
+                builder: (_) => HomeScreen(),
               ),
-              (route) => route.settings.name == '/',  // <== 이렇게 쓰면 HomeScreen으로 바로 간다(다른 페이지들은 삭제)
+              (route) => false  // <== 이렇게 쓰면 HomeScreen 빼고 다른 페이지들은 삭제
             );
           },
           child: Text('Push And Remove Until'),
